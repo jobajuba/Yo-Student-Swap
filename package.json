@@ -1,6 +1,6 @@
 {
-  "name": "pancake-frontend",
-  "version": "0.1.0",
+  "name": "yoswap",
+  "version": "0.1.4",
   "private": true,
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
