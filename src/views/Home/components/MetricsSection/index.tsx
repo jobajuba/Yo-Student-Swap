@@ -63,22 +63,22 @@ const Stats = () => {
       <Flex flexDirection={['column', null, null, 'row']}>
         <IconCard {...UsersCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
           <StatCardContent
-            headingText={t('42000 users', { users })}
-            bodyText={t('in the last 30 days')}
+            headingText={t('1000+ users', { users })}
+            bodyText={t('every week and growing')}
             highlightColor={theme.colors.secondary}
           />
         </IconCard>
         <IconCard {...TradesCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
           <StatCardContent
-            headingText={t('6066000 trades', { trades })}
+            headingText={t('26660+ trades', { trades })}
             bodyText={t('made in the last 30 days')}
             highlightColor={theme.colors.primary}
           />
         </IconCard>
         <IconCard {...StakedCardData}>
           <StatCardContent
-            headingText={t('$1.5 Million staked', { tvl: tvlString })}
-            bodyText={t('Total Value Locked')}
+            headingText={t('$1.5 Million Claimed', { tvl: tvlString })}
+            bodyText={t('Giveaways every week')}
             highlightColor={theme.colors.failure}
           />
         </IconCard>

@@ -1,11 +1,12 @@
 import React from 'react'
-import { NoProfileAvatarIcon, Flex, Heading, Skeleton, Text, Box } from '@pancakeswap/uikit'
+import { Flex, Heading, Skeleton, Text, Box } from '@pancakeswap/uikit'
 import { useWeb3React } from '@web3-react/core'
 import styled from 'styled-components'
 import { useProfile } from 'state/profile/hooks'
 import ProfileAvatarWithTeam from 'components/ProfileAvatarWithTeam'
 import { useTranslation } from 'contexts/Localization'
 import truncateHash from 'utils/truncateHash'
+import logo from './logo.png'
 
 const Desktop = styled(Flex)`
   align-items: center;
@@ -30,10 +31,10 @@ const Sticker = styled(Flex)`
   box-shadow: ${({ theme }) => theme.card.boxShadow};
 `
 
-const StyledNoProfileAvatarIcon = styled(NoProfileAvatarIcon)`
+/* const StyledNoProfileAvatarIcon = styled(NoProfileAvatarIcon)`
   height: 100%;
   width: 100%;
-`
+` */
 
 const UserDetail = () => {
   const { profile, isLoading } = useProfile()
@@ -60,7 +61,7 @@ const UserDetail = () => {
       )
     }
     if (isLoading && !profile) {
-      return <Skeleton width={120} height={20} mt="2px" mb="18px" />
+      return <img src={logo} alt="wallet connect" />
     }
     return <></>
   }
@@ -69,12 +70,14 @@ const UserDetail = () => {
     <>
       <Desktop>
         <Box mr="24px">
-          <Sticker>{profile ? <ProfileAvatarWithTeam profile={profile} /> : <StyledNoProfileAvatarIcon />}</Sticker>
+          <Sticker>            
+            {profile ? <ProfileAvatarWithTeam profile={profile} /> : <img src={logo} alt="wallet connect" /> }
+          </Sticker>
         </Box>
         <Flex flexDirection="column">
           {getDesktopHeading()}
           {isLoading || !account ? (
-            <Skeleton width={160} height={16} my="4px" />
+            <img src={logo} alt="wallet connect" />
           ) : (
             <Text fontSize="16px"> {t('Connected with %address%', { address: truncatedAddress })}</Text>
           )}

@@ -81,7 +81,7 @@ const HarvestCard = () => {
             <Link to="farms">
               <Button width={['100%', null, null, 'auto']} variant="secondary">
                 <Text color="primary" bold>
-                  {t('Start earning')}
+                  {t('Win free HAIR Tokens')}
                 </Text>
                 <ArrowForwardIcon ml="4px" color="primary" />
               </Button>

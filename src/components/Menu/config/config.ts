@@ -25,18 +25,16 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
     label: t('Earn Tokens'),
     href: '',
     icon: 'Earn',
+    showItemsOnMobile: false,
     items: [
       {
-        label: t('Follow us on social media for a chance to win free HAIR tokens'),
-      },
-      {
         label: t('Facebook'),
-        href: '/',      
+        href: 'https://www.facebook.com/hairtoken',      
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
         label: t('Twitter'),
-        href: '/',
+        href: '',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {

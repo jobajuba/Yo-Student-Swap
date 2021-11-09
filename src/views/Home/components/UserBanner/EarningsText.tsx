@@ -12,7 +12,7 @@ export const getEarningsText = (
     count: numFarmsToCollect,
   }
 
-  let earningsText = t('%earningsBusd% to collect', data)
+  let earningsText = t('%earningsBusd% in the pot so far and growing', data)
 
   if (numFarmsToCollect > 0 && hasCakePoolToCollect) {
     if (numFarmsToCollect > 1) {
