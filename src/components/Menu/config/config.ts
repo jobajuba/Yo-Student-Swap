@@ -22,34 +22,6 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
     ],
   },
   {
-    label: t('Earn Tokens'),
-    href: '',
-    icon: 'Earn',
-    showItemsOnMobile: false,
-    items: [
-      {
-        label: t('Facebook'),
-        href: 'https://www.facebook.com/hairtoken',      
-        type: DropdownMenuItemType.EXTERNAL_LINK,
-      },
-      {
-        label: t('Twitter'),
-        href: '',
-        type: DropdownMenuItemType.EXTERNAL_LINK,
-      },
-      {
-        label: t('Discord'),
-        href: '/',      
-        type: DropdownMenuItemType.EXTERNAL_LINK,
-      },
-      {
-        label: t('Medium'),
-        href: '/',
-        type: DropdownMenuItemType.EXTERNAL_LINK,
-      },
-    ],
-  },
-  {
     label: t('NFT'),
     href: `${nftsBaseUrl}`,
     icon: 'Nft',
@@ -71,35 +43,34 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
     hideSubNav: true,
     items: [
       {
-        label: t('Info'),
-        href: '/info',
+        label: t('Whitepaper'),
+        href: '/',
       },
       {
-        label: t('IFO'),
-        href: '/ifo',
-      },
-      {
-        label: t('Voting'),
-        href: '/voting',
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: t('Leaderboard'),
-        href: '/teams',
-      },
+        label: t('Pinkpaper'),
+        href: '/',
+      },    
       {
         type: DropdownMenuItemType.DIVIDER,
       },
       {
         label: t('Blog'),
-        href: 'https://medium.com/jobajuba',
+        href: 'https://yostudent.medium.com/yoswap-56290e1f75f6',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },   
+      {
+        label: t('Facebook'),
+        href: 'https://www.facebook.com/hairtoken',      
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
-        label: t('Docs'),
-        href: 'https://docs.hairtoken.finance',
+        label: t('Twitter'),
+        href: '',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
+      {
+        label: t('Discord'),
+        href: '',      
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
